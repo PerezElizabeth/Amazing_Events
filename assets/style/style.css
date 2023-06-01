@@ -1,0 +1,647 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    padding: 1.5rem;
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+
+
+    
+}
+
+header {
+
+    min-height: 10vh;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.logo {
+    height: 5rem;
+    width: 10rem;
+    object-fit: contain;
+
+
+}
+
+nav a {
+    padding: .5rem;
+    margin-top: 1rem;
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: rgb(167, 37, 80);
+    box-shadow: 0.1rem 0.1rem palevioletred;
+}
+
+main {
+    min-height: 60vh;
+    
+}
+
+.section_h1 {
+    min-height: 20vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 5rem;
+    text-align: center;
+
+
+}
+
+.checkbox {
+
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+
+}
+
+form {
+    display: flex;
+    justify-content: space-around;
+    
+    
+}
+
+.categorys {
+    /* border: 1px solid green; */
+    width: 50rem;
+    display: flex;
+    justify-content: space-around;
+    
+}
+.categorys_1{
+    /* border: none; */
+}
+.search_1{
+    border: 1px solid black;
+}
+.container-1{
+    display: flex;
+    align-items: center;
+    
+}
+.lupa{
+    height:1.75rem !important ;
+    width: 1.6rem !important;
+    border: 1px solid black;
+    
+}
+
+.card_home {
+    height: 19rem;
+
+    /* border: 1px solid blue; */
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-around;
+
+
+
+}
+
+.cards {
+
+    width: 16rem;
+    border: 1px solid rgb(58, 11, 11);
+   
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+.cards img {
+
+    height: 8rem;
+    width: 16rem;
+    padding: 1rem;
+    object-fit: cover;
+    border-radius: 1.3rem;
+
+
+}
+
+/* aqui empieza details */
+
+.cards_details{
+    
+    min-height: 80vh;
+    border: 1px solid rgb(58, 11, 11);
+    border-radius: 1em;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+    
+}
+.cards_details img{
+    
+    height: 14rem;
+    width: 18rem;
+    padding: 1rem;
+    object-fit: cover;
+    border: 1px solid black;
+    border-radius: 1.5rem;
+    margin-top: 4rem;
+    
+    
+}
+
+    
+
+ .details{
+    display: flex;
+    
+} 
+.details p{
+    font-size: .8rem;
+}
+
+.titulo{
+    border: 1px solid black; 
+    border-radius: 1rem;
+    height: 18rem;
+    width: 22rem;
+    margin: 2rem;
+    padding: 1rem;
+   
+    
+    
+}
+
+.titulo h5{
+    font-size: 1.5rem;
+    text-align: center;
+}
+.price_button {
+    display: flex;
+    justify-content: space-around;
+}
+
+.button {
+    color: black;
+    height: 1.5rem;
+    width: 4rem;
+    border: 1px solid black;
+    text-decoration: none;
+    background-color: #C850C0;
+
+
+
+}
+
+
+
+.card_home1 {
+    height: 19rem;
+    width: 100%;
+    /* border: 1px solid blue; */
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.redes {
+    /* border: 1px solid black; */
+    height: 4rem;
+    width: 15rem;
+    padding: .9rem;
+
+
+}
+
+.redes img {
+    height: 2rem;
+    width: 2rem;
+    object-fit: cover;
+    
+}
+
+.cohort {
+    /* border: 1px solid black; */
+    height: 2rem;
+    margin-right: 2rem;
+
+
+}
+
+/* aqui empieza contact */
+
+.contact{
+    border: none;
+}
+.formulario {
+    /* border: 1px solid purple; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.form_contact {
+    margin-top: 2rem;
+    /* border: 1px solid red; */
+    height: 19rem;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+
+
+.name {
+    margin-top: .7rem;
+
+}
+
+.message {
+    height: 9rem;
+    width: 30rem;
+}
+
+
+
+.enviar {
+    width: 30rem;
+    margin-bottom: 4rem;
+    /* border: 1px solid blue; */
+    display: flex;
+    justify-content: right;
+
+
+
+
+}
+
+/* aqui empieza stats */
+
+.tabla_statist {
+    /*  border: 1px solid black; */  
+    height: 25rem;
+    
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    align-items: center;
+
+
+
+}
+
+table {
+
+    /* border: #B9287A; */
+
+    text-align: center;
+    width: 60%;
+    height: 22rem;
+
+
+}
+
+
+td {
+    text-align: left;
+    border: #B9287A solid 1px;
+
+}
+
+th {
+     /* background-color: rgb(146, 131, 131); */ 
+    font-size: 1rem;
+    text-align: left;
+    
+    
+}
+
+
+td {
+    padding: 1rem 0;
+    width: 35%;
+
+}
+
+footer {
+    min-height: 10vh;
+    /* background-color: blueviolet; */
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+}
+
+/* hasta aqui llega desktop */
+/* responsive tablet */
+@media only screen and (min-width:768px) and (max-width:1024px) {
+
+
+    header{
+        width: 55rem;
+    }
+
+    .section_h1{
+        width: 55rem;
+    }
+
+
+    .categorys {
+        width: 48rem;
+        
+    }
+    form {
+        
+        width: 55rem;
+        
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .search_1{
+        border: none;
+        display: flex;
+        justify-content: center;
+        
+    }
+    .container-1 {
+        padding-top: 1rem;
+        margin-right: 3rem;
+        
+        
+    }
+    
+    
+
+    .card_home1 {
+        flex-direction: column;
+        height: 180vh;
+        align-items: center;
+        margin-left: 5.5rem;
+
+    }
+
+    .card_home {
+        flex-direction: column;
+        height: 240vh;
+        align-items: center;
+        margin-left: 11rem;
+    }
+
+    .cards {
+        width: 20rem;
+        height: 20rem;
+    }
+
+    .cards img {
+        width: 20rem;
+    }
+
+    h5 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
+    button {
+        width: 6rem;
+        height: 2rem;
+    }
+
+    .redes {
+        margin-left: 1rem;
+    }
+
+    .formulario{
+        width: 58rem;
+        
+        
+    }
+
+    .contact_footer{
+        width: 55rem;
+    }
+    .section_h{
+        margin-left: 13rem; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+    .tabla_statist{
+        width: 52rem;
+        height: 37rem;
+    }
+
+    table{
+        width: 80%;
+        
+    }
+    .cards_details{
+        width: 54rem;
+    }
+
+    footer{
+        width: 55rem;
+    }
+
+
+}
+
+
+/* responsive mobile */
+@media only screen and (min-width:320px) and (max-width:767px) {
+
+    header {
+        width: 48rem;
+        justify-content: space-between;
+        /* background-color: aqua; */
+        
+    }
+
+    .section_h1 {
+        width: 48rem;
+    }
+    .checkbox{
+        padding: .1rem;
+    }
+
+    form {
+        
+        width: 45rem;
+        
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+
+    
+  
+    
+
+    .categorys {
+        width: 46rem;
+        
+    }
+    .search_1{
+        border: none;
+        display: flex;
+        justify-content: center;
+        
+    }
+    
+    
+
+
+    .container-1 {
+        align-items: center;
+        justify-content: center;
+        padding-top: 1rem;
+        margin-left: 7rem;
+        
+        
+    }
+
+    .card_home1 {
+        flex-direction: column;
+        height: 195vh;
+        width: 45rem;
+        align-items: center;
+        margin-left: 3rem;
+    }
+
+    .card_home {
+        flex-direction: column;
+        height: 260vh;
+        width: 45rem;
+        align-items: center;
+        margin-left: 3rem;
+    }
+
+    .cards {
+        width: 20rem;
+        height: 21rem;
+    }
+
+    .cards img {
+        width: 20rem;
+    }
+
+    footer {
+        width: 50rem; 
+    }
+
+    h5 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1.3rem;
+    }
+
+    .button {
+        width: 6rem;
+        height: 2rem;
+    }
+
+    .header-contact{
+        width: 55rem;
+    }
+
+    .section_h1{
+        margin-left: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .section_h{
+        margin-left: 30rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+    
+
+    .formulario{
+        width: 60rem;
+        
+        
+    }
+
+   
+    .form_contact{
+        height: 20rem;
+        width: 22rem;
+        
+    }
+
+    .message{
+        height: 8rem;
+        width: 22rem;
+    }
+
+    
+
+    .enviar{
+        width: 22rem;
+
+    }
+
+    .contact{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .contact_footer{
+        width: 55rem;
+    }
+    
+    .tabla_statist{
+        width: 52rem;
+        height: 37rem;
+    }
+
+    table{
+        width: 80%;
+        
+    }
+
+    .redes {
+        margin-left: 1rem;
+    }
+
+    .cards_details{
+        width: 50rem;
+    }
+
+    
+}

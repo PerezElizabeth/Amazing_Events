@@ -6,11 +6,11 @@
 
 
 body {
+    
     padding: 1.5rem;
     background-color: #4158D0;
-    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
-
-
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%); 
+     
     
 }
 
@@ -21,6 +21,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
 
 }
 
@@ -36,7 +37,8 @@ nav a {
     padding: .5rem;
     margin-top: 1rem;
     text-decoration: none;
-    color: black;
+    color: rgb(167, 37, 80) !important;
+    
 }
 
 a:hover {
@@ -55,11 +57,13 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 h1 {
     font-size: 5rem;
     text-align: center;
+    color: rgb(167, 37, 80);
 
 
 }
@@ -86,9 +90,7 @@ form {
     justify-content: space-around;
     
 }
-.categorys_1{
-    /* border: none; */
-}
+
 .search_1{
     border: 1px solid black;
 }
@@ -105,23 +107,38 @@ form {
 }
 
 .card_home {
-    height: 19rem;
+    
 
+    
     /* border: 1px solid blue; */
     margin-top: 1rem;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
 
 
 
 }
 
+.card_homeU{
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
 .cards {
 
     width: 16rem;
     border: 1px solid rgb(58, 11, 11);
-   
+    border-radius: 1rem;
+    background-color: #FBDA61;
+    background-image: linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%); 
+    
 
+    
+
+    margin-top: 1rem;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -131,7 +148,7 @@ form {
 
 .cards img {
 
-    height: 8rem;
+    height: 9rem;
     width: 16rem;
     padding: 1rem;
     object-fit: cover;
@@ -162,6 +179,7 @@ form {
     padding: 1rem;
     object-fit: cover;
     border: 1px solid black;
+    
     border-radius: 1.5rem;
     margin-top: 4rem;
     
@@ -186,8 +204,6 @@ form {
     margin: 2rem;
     padding: 1rem;
    
-    
-    
 }
 
 .titulo h5{
@@ -214,7 +230,8 @@ form {
 
 
 .card_home1 {
-    height: 19rem;
+    
+
     width: 100%;
     /* border: 1px solid blue; */
     margin-top: 1rem;
@@ -302,7 +319,6 @@ form {
 .tabla_statist {
     /*  border: 1px solid black; */  
     height: 25rem;
-    
     display: flex;
     flex-direction: column;
     margin-top: 2rem;
@@ -346,8 +362,8 @@ td {
 }
 
 footer {
-    min-height: 10vh;
-    /* background-color: blueviolet; */
+    height: 10vh;
+    /* background-color: blueviolet; */ 
     margin-top: 2rem;
     display: flex;
     align-items: center;
@@ -358,6 +374,8 @@ footer {
 /* hasta aqui llega desktop */
 /* responsive tablet */
 @media only screen and (min-width:768px) and (max-width:1024px) {
+
+    
 
 
     header{
@@ -407,9 +425,17 @@ footer {
 
     .card_home {
         flex-direction: column;
-        height: 240vh;
+        height: 940vh;
         align-items: center;
         margin-left: 11rem;
+    }
+    .card_homeU{
+
+        flex-direction: column;
+        height: 450vh;
+        width: 40rem;
+        align-items: center;
+        margin-left: 5rem; 
     }
 
     .cards {
@@ -478,23 +504,26 @@ footer {
 /* responsive mobile */
 @media only screen and (min-width:320px) and (max-width:767px) {
 
+   
     header {
-        width: 48rem;
+       width: 46rem;
         justify-content: space-between;
         /* background-color: aqua; */
         
     }
 
     .section_h1 {
-        width: 48rem;
+        width: 45rem;
+        
     }
     .checkbox{
+        width: 20rem;
         padding: .1rem;
     }
 
     form {
         
-        width: 45rem;
+         width: 45rem;
         
         flex-direction: column;
         justify-content: center;
@@ -506,7 +535,7 @@ footer {
     
 
     .categorys {
-        width: 46rem;
+     width: 46rem;
         
     }
     .search_1{
@@ -528,20 +557,28 @@ footer {
         
     }
 
-    .card_home1 {
+    /* .card_home1 {
         flex-direction: column;
-        height: 195vh;
-        width: 45rem;
+        height: 480vh;
+        width: 40rem;
         align-items: center;
         margin-left: 3rem;
-    }
+    } */ 
 
     .card_home {
         flex-direction: column;
-        height: 260vh;
-        width: 45rem;
+        height: 900vh;
+        width: 40rem;
         align-items: center;
-        margin-left: 3rem;
+        margin-left: 5rem; 
+    }
+    .card_homeU{
+
+        flex-direction: column;
+        height: 450vh;
+        width: 40rem;
+        align-items: center;
+        margin-left: 5rem; 
     }
 
     .cards {

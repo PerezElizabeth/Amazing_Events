@@ -1,4 +1,32 @@
 let contenedorCheckbox = document.getElementById("checkbox");
+let data;
+fetch ('https://mindhub-xj03.onrender.com/api/amazing')
+.then(data => data.json())
+.then(res => {
+  data = res
+  console.log(data)
+  
+  printData(data.events, contenedorCards)
+  const fnMap = (elemento) => elemento.category;
+  const categorias = data.events.map(fnMap);
+  const categoriasNoRepetidas = new Set(categorias);
+  const arrayCategoriasNoRepetidas = Array.from(categoriasNoRepetidas)
+  let template = "";
+  categoriasNoRepetidas.forEach((element) => {
+    console.log(element);
+    template += insertarChecks(element);
+  });
+  contenedorCheckbox.innerHTML += template;
+  let inputCheckbox = Array.from(document.querySelectorAll("input[type=checkbox]"));
+  inputCheckbox.forEach((input) => {
+  input.addEventListener("click", (event) => {
+  const categoriasFiltradas= filtrosCruzados(data.events);
+  printData(categoriasFiltradas, contenedorCards)
+});
+});
+})
+.catch(err => console.log (err))
+
 
 
 function insertarChecks(checks) {
@@ -8,7 +36,7 @@ function insertarChecks(checks) {
             `
 }
 
-const fnMap = (elemento) => elemento.category;
+/* const fnMap = (elemento) => elemento.category;
 const categorias = data.events.map(fnMap);
 console.log(categorias);
 
@@ -30,7 +58,7 @@ inputCheckbox.forEach((input) => {
    const categoriasFiltradas= filtrosCruzados(data.events);
    printData(categoriasFiltradas, contenedorCards)
   });
-});
+}); */
 
 
 
@@ -59,7 +87,7 @@ function printData(array,place){
     place.innerHTML = template
 
 }
-printData(data.events,contenedorCards)
+/* printData(data.events,contenedorCards) */
 
 function filtrarPorCheck(array) {
     const checkbox = Array.from(document.querySelectorAll("input[type=checkbox]:checked")).map((check) => check.value);

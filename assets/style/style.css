@@ -50,6 +50,7 @@ main {
     min-height: 60vh;
     
     
+    
 }
 
 .section_h1 {
@@ -338,34 +339,36 @@ h1 {
 
 /* aqui empieza stats */
 
-.tabla_statist {
-    /* border: 1px solid black;  */
-    height: 25rem;
+
+ .main_stats{
     display: flex;
     flex-direction: column;
-    margin-top: 2rem;
+    justify-content: center;
     align-items: center;
-
+ }
+table {
+    border: #B9287A solid 1px;
+    text-align: center;
+    
+    width: 60%;
+    
+    
 
 
 }
 
-table {
-
-    border: 1px solid #B9287A; 
-
+.th_titulo{
+    font-size: 1rem;
     text-align: center;
-    width: 70%;
-    height: 22rem;
-
-
+    color: black;
 }
 
 
 td {
     text-align: left;
     border: #B9287A solid 1px;
-    width: 35%;
+    width: 5rem;
+     
     
     
 
@@ -373,8 +376,9 @@ td {
 
 th {
      /* background-color: rgb(146, 131, 131); */ 
-    font-size: 1rem;
-    text-align: left;
+    font-size: .8rem;
+    text-align: center;
+
     
     
 }
@@ -398,17 +402,17 @@ footer {
 
 
     header{
-        width: 55rem;
+        width: 45rem;
     }
 
     .section_h1{
-        width: 55rem;
+        width: 45rem;
     }
 
 
     .checkbox{
         /* border: 1px solid red; */
-        width: 54rem;
+        width: 45rem;
     }
 
     .checkbox input{
@@ -418,7 +422,7 @@ footer {
     .form_index {
         /* border: 1px solid blue; */
         width: 14rem;
-        margin-left: 12rem;
+        
         justify-content: center;
         align-items: center;
         
@@ -431,14 +435,9 @@ footer {
         justify-content: center;
         
     }
-    button {
-        width: 5rem;
-        height: 2rem;
-    }
+    
 
-    .lupa{
-        width: 1.9rem !important;
-    }
+    
     .container-1 {
         padding-top: 1rem;
         margin-right: 3rem;
@@ -459,16 +458,16 @@ footer {
     .card_home {
         /* border: 1px solid green; */
         
-        width: 52rem;
-        height: 480vh;
+        width: 43rem;
+        height: 1080vh;
         align-items: center;
         
     }
     .card_homeU{
         /* border: 1px solid red; */
         
-        height: 280vh;
-        width: 53rem;
+        height: 580vh;
+        width: 45rem;
         align-items: center;
         
     }
@@ -480,6 +479,7 @@ footer {
 
     .cards img {
         width: 20rem;
+        
     }
 
     h5 {
@@ -495,21 +495,15 @@ footer {
     
 
     .formulario{
-        width: 58rem;
+        width: 45rem;
         
         
     }
 
     .contact_footer{
-        width: 55rem;
+        width: 45rem;
     }
-    .section_h{
-        margin-left: 13rem; 
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-    }
+    
     .tabla_statist{
         width: 54rem;
         height: 37rem;
@@ -518,6 +512,10 @@ footer {
     table{
         width: 80%;
         
+    }
+
+    .stats{
+        width: 45rem;
     }
 
     
@@ -542,19 +540,22 @@ footer {
 
    
     header {
-       width: 46rem;
+       width: 60rem;
         justify-content: space-between;
         /* background-color: aqua; */
         
     }
+    main{
+        width: 55rem;
+    }
 
     .section_h1 {
-        width: 45rem;
+       width: 30rem;
         
     }
     .checkbox{
         /* border: 1px solid blue; */
-        width: 50rem;
+        width: 55rem;
         
     }
 
@@ -568,7 +569,7 @@ footer {
     .form_index {
         /* border: 1px solid blue; */
         width: 55rem;
-        margin-left: 25rem;
+        
         justify-content: center;
         
     }
@@ -583,8 +584,8 @@ footer {
     }
     .search_1{
         border: none;
-        display: flex;
-        justify-content: center;
+        /* display: flex;
+        justify-content: center; */
         
     }
     
@@ -595,45 +596,39 @@ footer {
         align-items: center;
         justify-content: center;
         padding-top: 1rem;
-        margin-left: 7rem;
+        width: 55rem;
         
         
     }
 
-    /* .card_home1 {
-        flex-direction: column;
-        height: 480vh;
-        width: 40rem;
-        align-items: center;
-        margin-left: 3rem;
-    } */ 
+    
 
     .card_home {
-        flex-direction: column;
-        height: 980vh;
-        width: 40rem;
+        /* flex-direction: column; */
+        height: 3100vh;
+        width: 56rem;
         align-items: center;
-        margin-left: 5rem;
-        /* border: 1px solid red;  */
+        
+        border: 1px solid red;
     }
     .card_homeU{
-        /* border: 1px solid red; */
+        border: 1px solid red;
 
         flex-direction: column;
-        height: 500vh;
-        width: 38rem;
+        height: 1800vh;
+        width: 58rem;
         align-items: center;
-        margin-left: 5rem; 
+         
     }
 
     .cards {
-        width: 30rem;
-        height: 23rem;
+        width: 40rem;
+        height: 28rem;
     }
 
     .cards img {
-        width: 30rem;
-        height: 11rem;
+        width: 40rem;
+        height: 12rem;
     }
 
     .cards p{
@@ -662,13 +657,14 @@ footer {
     }
 
     .section_h1{
-        margin-left: 3rem;
+        width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
     }
     .section_h{
-        margin-left: 30rem;
+        
+        width: 55rem;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -677,7 +673,7 @@ footer {
     
 
     .formulario{
-        width: 60rem;
+        width: 55rem;
         
         
     }
@@ -712,14 +708,35 @@ footer {
         width: 55rem;
     }
     
-    .tabla_statist{
-        width: 52rem;
-        height: 37rem;
+   
+
+    .stats{
+        width: 60rem;
     }
 
-    table{
-        width: 80%;
+    .main_stats{
+        align-items: center;
+        width: 55rem;
+
+    }
+
+    .section_h1Stats{
+        width: 100%;
         
+        
+       
+
+    }
+    table{
+        width: 100%;
+        height: 10rem;
+        
+    }
+
+    h6{
+        
+        
+        width: 17rem;
     }
 
     
@@ -728,9 +745,49 @@ footer {
         margin-left: 1rem;
     }
 
-    .cards_details{
-        width: 50rem;
+    
+
+    /* .header_details{
+        width: 25rem;
     }
+
+    .main_details{
+        width: 20rem;
+        
+        
+    } 
+
+    
+
+    .details{
+        border: 1px solid blue;
+        height: 45rem;
+        
+        display: flex;
+        flex-direction: column;
+        
+        
+    }
+
+    .details img{
+        
+        height: 20rem;
+    }
+    
+
+    .titulo{
+       
+        height: 25rem;
+        
+    }
+    .titulo p{
+        font-size: 1.5rem;
+        color: black;
+    }
+
+    .footer_details{
+        width: 25rem;
+    } */
 
     
 }

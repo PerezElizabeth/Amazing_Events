@@ -1,4 +1,34 @@
 let contenedorCheckbox = document.getElementById("checkbox");
+/* import {filtrarPorCheck,happenedEvent,filtrarPorSearch,filtrosCruzados,insertarChecks} from './assets/funcionesjs' */
+
+
+let data;
+fetch ('https://mindhub-xj03.onrender.com/api/amazing')
+.then(data => data.json())
+.then(res => {
+  data = res
+  console.log(data)
+  
+  printData(data.events, contenedorCards)
+  const fnMap = (elemento) => elemento.category;
+  const categorias = data.events.map(fnMap);
+  const categoriasNoRepetidas = new Set(categorias);
+  const arrayCategoriasNoRepetidas = Array.from(categoriasNoRepetidas)
+  let template = "";
+  categoriasNoRepetidas.forEach((element) => {
+    console.log(element);
+    template += insertarChecks(element);
+  });
+  contenedorCheckbox.innerHTML += template;
+  let inputCheckbox = Array.from(document.querySelectorAll("input[type=checkbox]"));
+  inputCheckbox.forEach((input) => {
+  input.addEventListener("click", (event) => {
+  const categoriasFiltradas= filtrosCruzados(data.events);
+  printData(categoriasFiltradas, contenedorCards)
+});
+});
+})
+.catch(err => console.log (err))
 
 // funcion para crear los checkbox
 function insertarChecks(checks) {
@@ -6,25 +36,28 @@ function insertarChecks(checks) {
             <label for="${checks}-input">${checks}</label>
             
             `
-}
+} 
+
+
 //Obtener las categorias
 // recibe el elemento y me muestra las categorias de ese elemento
-const fnMap = (elemento) => elemento.category;
-const categorias = data.events.map(fnMap);
-console.log(categorias); // array nuevo con las categorias(pero estan repetidas)
+/* const fnMap = (elemento) => elemento.category; */
+/* const categorias = data.events.map(fnMap); */
+/* console.log(categorias); */ // array nuevo con las categorias(pero estan repetidas)
 // Sacar las categorias repetidas con Set(almacena valores unicos)
-const categoriasNoRepetidas = new Set(categorias); // new set del array que tiene las categorias repetidas y me las devuelve solo con valores unicos
+/* const categoriasNoRepetidas = new Set(categorias); // new set del array que tiene las categorias repetidas y me las devuelve solo con valores unicos
 const arrayCategoriasNoRepetidas = Array.from(categoriasNoRepetidas);// debo convertirlo en array para poder usar un metodo de array
-console.log(arrayCategoriasNoRepetidas);
+console.log(arrayCategoriasNoRepetidas);  */
+
+
 
 // funcion que lleve los checks al dom
-let template = "";
+/* let template = "";
 categoriasNoRepetidas.forEach((element) => {
   console.log(element);
   template += insertarChecks(element);
 });
 contenedorCheckbox.innerHTML += template;
-
 
 // colocarle el escuchador a los checkbox
 let inputCheckbox = Array.from(document.querySelectorAll("input[type=checkbox]"));// todos los checkbox,con query vienen en nodelist,los paso a array
@@ -35,7 +68,7 @@ inputCheckbox.forEach((input) => {
    const categoriasFiltradas= filtrosCruzados(data.events);// cuando se genere, mostrar las cards de cada categoria de la data(antes tenia filtrarPorChecks)
    printData(categoriasFiltradas, contenedorCards) // Ejecuto funcion para imprimir
   });
-});
+}); */
 //funcion para crear las cards 
 let contenedorCards = document.getElementById("card");
 function templateIndex(objeto) {
@@ -50,18 +83,22 @@ function templateIndex(objeto) {
                 </div>
             </div>`;
 }
+
+
 // funcion para imprimir las cards
 function printData(array, place) {
   let template = "";
+ 
 
   for (let event of array) {
+    
     template += templateIndex(event);// concateno lo que va devolviendo la funcion
   }
 
   place.innerHTML = template;
 }
 
-printData(data.events, contenedorCards);// ejecuto la funcion para imprimmir las cards
+/* printData(data.events, contenedorCards); */// ejecuto la funcion para imprimmir las cards
 
 // cuando se genere el evento filtrar las categorias que esten checkeds(necesito esos checkbox y los traigo con query)
 function filtrarPorCheck(array) {
@@ -75,7 +112,7 @@ function filtrarPorCheck(array) {
     }
 }  
 
- const contenedorSearch = document.getElementById("searchBox")
+const contenedorSearch = document.getElementById("searchBox")
  
 contenedorSearch.addEventListener("keyup", happenedEvent)
 
@@ -89,7 +126,7 @@ function filtrarPorSearch(array){
     if(filtrarPorSearch.length != "0"){
       return filtroSearch
   }else{
-      return alert("Search not found")
+      return alert("Evento no coincide con su busqueda")
   }
     
 }
@@ -98,5 +135,4 @@ function filtrosCruzados(array){
     const filters = filtrarPorSearch(array)
     const filters2 = filtrarPorCheck(filters)
     return filters2
-}  
- 
+}   
